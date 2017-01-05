@@ -32,7 +32,7 @@ A basic explanation of the properties in oddr.properties:
 The sample class below shows how to use OpenDDR: 
 
 <pre><code>
-public class SimpleTest
+public class SimpleConsole
 {
 	public static void Main(string[] args)
 	{
