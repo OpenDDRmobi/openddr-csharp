@@ -34,11 +34,11 @@ class Program
         string testDataFile = @"ua_strings.txt";
         Stopwatch stopWatch = new Stopwatch();
         stopWatch.Start();
-        Classifier client = null;
+        Classifier cl = null;
         Console.WriteLine("Loading...");
         try
         {
-            client = new Classifier();
+            cl = new Classifier();
         }
         catch (OpenDDRException oddrException)
         {
@@ -49,20 +49,20 @@ class Program
         }
         stopWatch.Stop();
         Console.Clear();
-        if (client != null)
+        if (cl != null)
         {
             Console.WriteLine("Loaded !");
-            Console.WriteLine(string.Format("Classifier Client : {0}", client.Version));
-            string str = client.DeviceCount.ToString();
-            string str1 = client.PatternCount.ToString();
+            Console.WriteLine(string.Format("OpenDDR Classifier Client : {0}", cl.Version));
+            string str = cl.DeviceCount.ToString();
+            string str1 = cl.PatternCount.ToString();
             double totalMilliseconds = stopWatch.Elapsed.TotalMilliseconds;
             Console.WriteLine(string.Format("Loaded {0} devices with {1} patterns in {2} ms", str, str1, totalMilliseconds.ToString()));
             stopWatch.Restart();
             Console.WriteLine("Cold run");
-            Map(client, "Mozilla/5.0 (Linux; U; Android 2.2; en; HTC Aria A6380 Build/ERE27) AppleWebKit/540.13+ (KHTML, like Gecko) Version/3.1 Mobile Safari/524.15.0");
-            Map(client, "Mozilla/5.0 (iPad; U; CPU OS 4_3_5 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8L1");
-            Map(client, "Mozilla/5.0 (BlackBerry; U; BlackBerry 9810; en-US) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.0.0.261 Mobile Safari/534.11+");
-            Map(client, "Mozilla/5.0 (iPhone; CPU iPhone OS 6_0 like Mac OS X; en-us) AppleWebKit/536.26 (KHTML, like Gecko) CriOS/23.0.1271.91 Mobile/10A403 Safari/8536.25");
+            Map(cl, "Mozilla/5.0 (Linux; U; Android 2.2; en; HTC Aria A6380 Build/ERE27) AppleWebKit/540.13+ (KHTML, like Gecko) Version/3.1 Mobile Safari/524.15.0");
+            Map(cl, "Mozilla/5.0 (iPad; U; CPU OS 4_3_5 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8L1");
+            Map(cl, "Mozilla/5.0 (BlackBerry; U; BlackBerry 9810; en-US) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.0.0.261 Mobile Safari/534.11+");
+            Map(cl, "Mozilla/5.0 (iPhone; CPU iPhone OS 6_0 like Mac OS X; en-us) AppleWebKit/536.26 (KHTML, like Gecko) CriOS/23.0.1271.91 Mobile/10A403 Safari/8536.25");
             stopWatch.Stop();
             totalMilliseconds = stopWatch.Elapsed.TotalMilliseconds;
             Console.WriteLine(string.Format("End cold run : {0} ms", totalMilliseconds.ToString()));
@@ -78,7 +78,7 @@ class Program
                 int i = 0;
                 foreach (string ua in cleanLines)
                 {
-                    Map(client, ua.Trim());
+                    Map(cl, ua.Trim());
                     i = i + 1;
                 }
                 stopWatch.Stop();

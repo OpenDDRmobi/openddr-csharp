@@ -25,7 +25,6 @@ namespace ClassifierClient
         public const string BUILDER_DATA = "BuilderDataSource.xml";
         public const string BUILDER_DATA_PATCH = "BuilderDataSourcePatch.xml";
         public const string DEVICE_DATA = "DeviceDataSource.xml";
-
         public const string DEVICE_DATA_PATCH = "DeviceDataSourcePatch.xml";
 
         //public const string DEVICE_UA = "mobi.openddr.classifier.client";
