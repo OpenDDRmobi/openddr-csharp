@@ -66,12 +66,14 @@ namespace Oddr.Documenthandlers
             }
 
             deviceBuilderClassMapper = new Dictionary<string, string>();
-            deviceBuilderClassMapper.Add("org.openddr.simpleapi.oddr.builder.device.AndroidDeviceBuilder", "Oddr.Builders.Devices.AndroidDeviceBuilder");
-            deviceBuilderClassMapper.Add("org.openddr.simpleapi.oddr.builder.device.SymbianDeviceBuilder", "Oddr.Builders.Devices.SymbianDeviceBuilder");
-            deviceBuilderClassMapper.Add("org.openddr.simpleapi.oddr.builder.device.WinPhoneDeviceBuilder", "Oddr.Builders.Devices.WinPhoneDeviceBuilder");
-            deviceBuilderClassMapper.Add("org.openddr.simpleapi.oddr.builder.device.IOSDeviceBuilder", "Oddr.Builders.Devices.IOSDeviceBuilder");
-            deviceBuilderClassMapper.Add("org.openddr.simpleapi.oddr.builder.device.SimpleDeviceBuilder", "Oddr.Builders.Devices.SimpleDeviceBuilder");
-            deviceBuilderClassMapper.Add("org.openddr.simpleapi.oddr.builder.device.TwoStepDeviceBuilder", "Oddr.Builders.Devices.TwoStepDeviceBuilder");
+            deviceBuilderClassMapper.Add("mobi.openddr.simple.builder.device.AndroidDeviceBuilder", "Oddr.Builders.Devices.AndroidDeviceBuilder");
+            deviceBuilderClassMapper.Add("mobi.openddr.simple.builder.device.SymbianDeviceBuilder", "Oddr.Builders.Devices.SymbianDeviceBuilder");
+            deviceBuilderClassMapper.Add("mobi.openddr.simple.builder.device.WinPhoneDeviceBuilder", "Oddr.Builders.Devices.WinPhoneDeviceBuilder");
+            deviceBuilderClassMapper.Add("mobi.openddr.simple.builder.device.IOSDeviceBuilder", "Oddr.Builders.Devices.IOSDeviceBuilder");
+            deviceBuilderClassMapper.Add("mobi.openddr.simple.builder.device.SimpleDeviceBuilder", "Oddr.Builders.Devices.SimpleDeviceBuilder");
+            deviceBuilderClassMapper.Add("mobi.openddr.simple.builder.device.TwoStepDeviceBuilder", "Oddr.Builders.Devices.TwoStepDeviceBuilder");
+            deviceBuilderClassMapper.Add("mobi.openddr.simple.builder.device.BotDeviceBuilder", "Oddr.Builders.Devices.SimpleDeviceBuilder");
+            deviceBuilderClassMapper.Add("mobi.openddr.simple.builder.device.DesktopOSDeviceBuilder", "Oddr.Builders.Devices.SimpleDeviceBuilder");
         }
 
         /// <exception cref="System.ArgumentNullException">Thrown when stream is null</exception>
@@ -103,7 +105,7 @@ namespace Oddr.Documenthandlers
             {
                 throw new Exception("Input stream is not valid");
             }
-
+            //Console.WriteLine("Parsing...");
             BuilderWrapper[] buildersWrapper = (from b in doc.Descendants(ELEMENT_BUILDERS).Descendants(BUILDER_DEVICE)
                                                 select new BuilderWrapper
                                                 {

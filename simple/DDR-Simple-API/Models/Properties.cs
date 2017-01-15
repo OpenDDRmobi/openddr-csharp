@@ -101,6 +101,7 @@ namespace W3c.Ddr.Models
         public void Reload(String filename)
         {
             this.filename = filename;
+            Console.WriteLine("Loading " + filename + "...");
             list = new Dictionary<String, object>();
 
             if (System.IO.File.Exists(filename))

@@ -713,7 +713,7 @@ namespace Oddr
             }
             catch (IOException ex)
             {
-                throw new InitializationException(InitializationException.INITIALIZATION_ERROR, new ArgumentException("Can not open " + ODDR_UA_DEVICE_BUILDER_PATH_PROP + " " + oddrUaDeviceBuilderPath));
+                throw new InitializationException(InitializationException.INITIALIZATION_ERROR, new ArgumentException("Can not open " + ODDR_UA_DEVICE_BUILDER_PATH_PROP + ": " + oddrUaDeviceBuilderPath));
             }
 
             /// TODO: Check stream. If stream is null DeviceBuilderParser throws ArgumentNullException
@@ -725,7 +725,7 @@ namespace Oddr
             }
             catch (Exception ex)
             {
-                throw new InitializationException(InitializationException.INITIALIZATION_ERROR, new Exception("Can not parse " + ODDR_UA_DEVICE_DATASOURCE_PATH_PROP + " :" + oddrUaDeviceBuilderPath));
+                throw new InitializationException(InitializationException.INITIALIZATION_ERROR, new Exception("Can not parse " + ODDR_UA_DEVICE_BUILDER_PATH_PROP + ": " + oddrUaDeviceBuilderPath));
             }
 
             try

@@ -28,13 +28,26 @@ namespace OpenDDRTest
     {
         public static void Main(string[] args)
         {
-            string oddrPropertiesPath = args[0];
-            string userAgent = args[1];
-
+            string oddrPropertiesPath = "";
+            string userAgent = "";
+            if (args.Length > 1)
+            {
+                oddrPropertiesPath = args[0];
+                userAgent = args[1];
+            }
+            if (oddrPropertiesPath == null || oddrPropertiesPath.Length == 0)
+            {
+                oddrPropertiesPath = "C:\\temp\\device-data\\oddr.properties";
+            }
+            if (userAgent == null || userAgent.Length == 0)
+            {
+                userAgent = "Mozilla/5.0 (Linux; U; Android 2.2; en; HTC Aria A6380 Build/ERE27) AppleWebKit/540.13+ (KHTML, like Gecko) Version/3.1 Mobile Safari/524.15.0";
+            }
             Properties props = new Properties(oddrPropertiesPath);
 
             Type stype = Type.GetType("Oddr.ODDRService, OpenDdr");
 
+            Console.WriteLine("Retrieving service...");
             IService openDDRService = ServiceFactory.newService(stype, props.GetProperty("oddr.vocabulary.device"), props);
 
             IPropertyName vendorDevicePropertyName = openDDRService.NewPropertyName("vendor", @"http://www.openddr.org/oddr-vocabulary");
@@ -76,7 +89,7 @@ namespace OpenDDRTest
             }
 
             Console.WriteLine(((BufferedODDRHTTPEvidence) e).deviceFound.Get("is_wireless_device"));
-
+            Console.WriteLine("Press any key to finish");
             Console.ReadKey();
         }
     }

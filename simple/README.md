@@ -2,7 +2,7 @@ OpenDDR-CSharp Simple API
 ==============
 Dear OpenDDR user, 
 
-this is the ALPHA version of the C# W3C Simple API Client for OpenDDR!
+This is the 1.0.3 version of the C# W3C Simple API Client for OpenDDR!
 
 We implemented all the features of OpenDDR Java version (except Group Aspect Identification), but we still need to improve performance.
 
