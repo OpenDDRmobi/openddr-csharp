@@ -13,7 +13,7 @@ Thanks for your helping OpenDDR growing!
 Below a description of the directory tree:
 * __DDR-Simple-API__: contains the porting of the W3C's Device Description Repository Simple API 
 * __OpenDDR-CSharp__: contains the porting of the Java version of OpenDDR
-* __OpenDDRTest__: contains a simple test project of the C# version of OpenDDR
+* __SimpleConsole__: contains a console test project for the C# version of OpenDDR Simple API Client
 
 
 A basic explanation of the properties in oddr.properties:

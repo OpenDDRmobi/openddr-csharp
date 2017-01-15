@@ -22,9 +22,9 @@ using W3c.Ddr.Models;
 using W3c.Ddr.Simple;
 using Oddr.Models;
 
-namespace OpenDDRTest
+namespace SimpleConsole
 {
-    public class SimpleConsole
+    public class Program
     {
         public static void Main(string[] args)
         {

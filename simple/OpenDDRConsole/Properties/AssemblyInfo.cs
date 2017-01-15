@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Le informazioni generali relative a un assembly sono controllate dal seguente 
 // set di attributi. Per modificare le informazioni associate a un assembly
 // occorre quindi modificare i valori di questi attributi.
-[assembly: AssemblyTitle("OpenDDRTest")]
+[assembly: AssemblyTitle("OpenDDR Simple Console")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("OpenDDR")]
-[assembly: AssemblyProduct("OpenDDRTest")]
+[assembly: AssemblyProduct("OpenDDR Simple API Console")]
 [assembly: AssemblyCopyright("Copyright ©  2012-2017 OpenDDR LLC and others")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

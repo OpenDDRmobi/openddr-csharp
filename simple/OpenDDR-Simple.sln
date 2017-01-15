@@ -8,7 +8,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenDDR-CSharp", "OpenDDR-C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDR-Simple-API", "DDR-Simple-API\DDR-Simple-API.csproj", "{F802E34F-10F1-4334-9099-3F1579DC4F06}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenDDRTest", "OpenDDRTest\OpenDDRTest.csproj", "{C1ECDE8F-0B77-422D-B4B6-0CF2239C7FA2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenDDRConsole", "OpenDDRConsole\OpenDDRConsole.csproj", "{C1ECDE8F-0B77-422D-B4B6-0CF2239C7FA2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

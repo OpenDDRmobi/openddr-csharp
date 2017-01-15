@@ -8,8 +8,8 @@
     <ProjectGuid>{C1ECDE8F-0B77-422D-B4B6-0CF2239C7FA2}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OpenDDRTest</RootNamespace>
-    <AssemblyName>OpenDDRTest</AssemblyName>
+    <RootNamespace>SimpleConsole</RootNamespace>
+    <AssemblyName>SimpleConsole</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -39,7 +39,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <IntermediateOutputPath>C:\Users\Werner\AppData\Local\Temp\vsBCDB.tmp\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\temp\vsBCDB.tmp\x86\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -49,10 +49,13 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <IntermediateOutputPath>C:\Users\Werner\AppData\Local\Temp\vsBCDB.tmp\x86\Release\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\temp\x86\Release\</IntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>OpenDDRTest.SimpleConsole</StartupObject>
+    <StartupObject>SimpleConsole.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>openddr.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
@@ -68,7 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SimpleConsole.cs" />
+    <Compile Include="Program.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DDR-Simple-API\DDR-Simple-API.csproj">
@@ -101,6 +104,9 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="openddr.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
