@@ -13,7 +13,7 @@ Thanks for your helping OpenDDR growing!
 Below a description of the directory tree:
 * __DDR-Simple-API__: contains the porting of the W3C's Device Description Repository Simple API 
 * __OpenDDR-CSharp__: contains the porting of the Java version of OpenDDR
-* __SimpleConsole__: contains a console test project for the C# version of OpenDDR Simple API Client
+* __OpenDDRConsole__: contains a console test project for the C# version of OpenDDR Simple API Client
 
 
 A basic explanation of the properties in oddr.properties:
@@ -29,10 +29,10 @@ A basic explanation of the properties in oddr.properties:
 * __oddr.vocabulary.device__: IRI of the default vocabulary. It is the target namespace specified in a vocabulary
 * __oddr.threshold__: Identification threshold. It is used to balance the request evaluation time and identification matching.
 
-The sample class below shows how to use OpenDDR: 
+The sample console app SimpleConsole below shows how to use OpenDDR: 
 
 <pre><code>
-public class SimpleConsole
+public class Program
 {
 	public static void Main(string[] args)
 	{
