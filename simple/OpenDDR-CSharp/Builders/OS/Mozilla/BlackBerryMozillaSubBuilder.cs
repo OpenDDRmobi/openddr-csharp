@@ -50,8 +50,8 @@ namespace Oddr.Builders.OS.Mozilla
 
                     if (groups[11].Value != null && groups[11].Value.Trim().Length > 0)
                     {
-                        model.SetVendor("Research In Motion");
-                        model.SetModel("RIM Tablet OS");
+                        model.SetVendor("BlackBerry");
+                        model.SetModel("BlackBerry OS");
                         model.majorRevision = "1";
                         model.confidence = 50;
 
@@ -93,8 +93,8 @@ namespace Oddr.Builders.OS.Mozilla
                     }
                     else if ((groups[1] != null && groups[1].Value.Trim().Length > 0) || (groups[6] != null && groups[6].Value.Trim().Length > 0))
                     {
-                        model.SetVendor("Research In Motion");
-                        model.SetModel("Black Berry OS");
+                        model.SetVendor("BlackBerry");
+                        model.SetModel("BlackBerry OS");
                         model.majorRevision = "1";
                         model.confidence = 40;
 
