@@ -38,8 +38,8 @@ namespace Oddr.Builders.OS
         {
             OSModel.OperatingSystem model = new OSModel.OperatingSystem();
 
-            model.SetVendor("Research In Motion");
-            model.SetModel("Black Berry OS");
+            model.SetVendor("BlackBerry");
+            model.SetModel("BlackBerry OS");
             model.majorRevision = "1";
 
             if (versionRegex.IsMatch(userAgent.completeUserAgent))
