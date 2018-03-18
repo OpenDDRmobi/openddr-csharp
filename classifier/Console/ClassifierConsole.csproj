@@ -86,7 +86,6 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="ClassifierConsole_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="openddr.ico" />
